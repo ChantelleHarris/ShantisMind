@@ -1,0 +1,478 @@
+
+
+
+/* MOBILE SCREEN SIZES */
+@import "./styles.mobile.css";
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Fleur+De+Leah&family=Fredericka+the+Great&display=swap');
+
+
+
+/* ALL OTHER SCREEN SIZES */
+
+@media(min-width: 901px) and (max-width: 3000px) {
+
+    .container {
+        display: grid;
+        grid-template-rows: 8% 8% 24% 22% 24%  8% 8%;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-areas:
+        "hd hd hd hd"
+        "hd hd hd hd"
+        "main main main main"
+        "main main main main"
+        "main main main main"
+        "ft ft ft ft"
+        "ft ft ft ft";
+    }
+
+    .header {
+        grid-area: hd;
+        box-shadow: 0px 0px 20px white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: fixed;
+        width: 99%;
+        height: 125px;
+        z-index: 1;
+    }
+
+    .main {
+        grid-area: main;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 300px;
+        margin-top: 40px;
+    }
+}
+
+/* HEADER */
+
+#title {
+    font-size: 50pt;
+    font-family: 'Fleur De Leah', cursive;
+    text-shadow: 0px 0px 20px white;
+    position: absolute;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    position: relative;
+    top: 40px;
+    right: 100px;
+}
+
+#about:hover {
+    text-decoration: overline;
+    text-shadow: 0px 0px 20px aquamarine;
+    color:aquamarine;
+    transition: all 0.3s ease-out;
+}
+
+#about:active {
+    color:rgb(184, 123, 241);
+    text-shadow: 0px 0px 30px rgb(184, 123, 241);
+    text-decoration: solid;
+}
+
+#get-in-touch {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#get-in-touch:hover {
+    text-shadow: 0px 0px 20px aquamarine;
+    color:aquamarine;
+    text-decoration: overline;
+    transition: all 0.3s ease-out;
+}
+
+#get-in-touch:active {
+    color:rgb(184, 123, 241);
+    text-shadow: 0px 0px 30px rgb(184, 123, 241);
+    text-decoration: solid;
+}
+
+/* MAIN CONTENT */
+
+.blog-1 {
+    grid-area: main;
+    box-shadow: 0px 0px 50px white;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    /* -webkit-border-radius: 50%; 
+    -moz-border-radius: 50%;  */
+    -webkit-animation: growUp 2s 1.5s;
+    -moz-animation: growUp 2s 1.5s; 
+    -ms-animation: growUp 2s 1.5s; 
+    -o-animation: growUp 2s 1.5s; 
+    animation: growUp 2s 1.5s; 
+    animation-iteration-count: 1;
+    animation-direction:alternate;
+    animation-duration: 10s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+.blog-1:hover {
+    box-shadow: 0px 0px 1000px rgb(56, 241, 56);
+    width: 325px;
+    height: 325px;
+    transition: all 0.3s ease-out;
+}
+
+#clouds {
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    object-fit: cover;
+}
+
+.overlay-1 {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.overlay-1 > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.overlay-1:hover {
+    opacity: 1;
+}
+
+.overlay-1:hover > * {
+    transform: translateY(0px);
+}
+
+#overlay-title-1 {
+    color: rgb(238, 160, 253);
+    font-size: 2em;
+    font-family: 'Fredericka the Great', cursive;
+    text-shadow: 0px 0px 10px black;
+    text-decoration: underline;
+}
+
+#overlay-title-1:hover {
+    color:rgb(56, 241, 56);
+}
+
+#overlay-title-1:active {
+    color: rgb(140, 181, 235);
+}
+
+.description-1 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Arima Madurai', cursive;
+    line-height: 1.5em;
+}
+
+
+.blog-2 {
+    grid-area: main;
+    box-shadow: 0px 0px 50px white;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    -webkit-animation: growUp 2s 1.5s;
+    -moz-animation: growUp 2s 1.5s; 
+    -ms-animation: growUp 2s 1.5s; 
+    -o-animation: growUp 2s 1.5s; 
+    animation: growUp 2s 1.5s; 
+    animation-iteration-count: 1;
+    animation-direction:alternate;
+    animation-duration: 10s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+.blog-2:hover {
+    box-shadow: 0px 0px 1000px rgb(248, 150, 2);
+    width: 325px;
+    height: 325px;
+    transition: all 0.3s ease-out;
+}
+
+#tulips {
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    object-fit: cover;
+}
+
+.overlay-2 {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.overlay-2 > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.overlay-2:hover {
+    opacity: 1;
+}
+
+.overlay-2:hover > * {
+    transform: translateY(0px);
+}
+
+#overlay-title-2 {
+    color: rgb(247, 164, 40);
+    font-size: 2em;
+    text-shadow: 0px 0px 20px black;
+    text-decoration: underline;
+}
+
+#overlay-title-2:hover {
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+#overlay-title-2:active {
+    color: rgb(36, 226, 36);
+    transition: all 0.3s ease-out;
+}
+
+.description-2 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Arima Madurai', cursive;
+    line-height: 1.5em;
+    text-shadow: 0px 0px 20px black;
+}
+
+@-webkit-keyframes growUp {   
+    0%  { -webkit-transform: scale(0); }
+    100% { -webkit-transform: scale(1); } 
+}
+
+@-moz-keyframes growUp {
+    0%  { -moz-transform: scale(0); }
+    100% { -moz-transform: scale(1); }
+}
+
+@-o-keyframes growUp {
+    0%  { -o-transform: scale(0); }
+    100% { -o-transform: scale(1); }
+}
+
+@-ms-keyframes growUp {
+    0%  { -ms-transform: scale(0); }
+    100% { -ms-transform: scale(1); }
+}
+
+@keyframes growUp {
+    0%  { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+/* FOOTER */
+
+footer {
+    grid-area: ft;
+    width: 100%;
+    height: fit-content;
+    box-shadow: 0px 0px 20px white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Arima Madurai', cursive;
+    position: relative;
+    bottom: 0px;
+}
+
+h2 {
+    font-family: 'Arima Madurai', cursive;
+    letter-spacing: 0.5em;
+    text-shadow: 0px 0px 20px white;
+    color: white;
+}
+
+form {
+    grid-area: ft;
+    grid-row-start:7;
+    grid-row-end: 8;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+label {
+    text-shadow: 0px 0px 20px aquamarine;
+    color:aquamarine;
+    text-decoration: overline;
+}
+
+#input {
+    background-color: transparent;
+    font-family: 'Arima Madurai', cursive;
+    color: white;
+    border-style: hidden;
+    box-shadow: 0px 0px 20px aquamarine;
+    border-radius: 5px;
+    padding-left: 5px;
+    outline: none;
+    width: 200px;
+    height: 25px;
+    z-index: 1;  
+}
+
+#input:hover {
+    box-shadow: 0px 0px 15px aquamarine;
+    background-color: rgba(109, 182, 241, 0.384);
+    transition: all 0.3s ease-out;
+}
+
+#input:focus {
+    border: 1px solid white;
+}
+
+::placeholder {
+    font-family: 'Arima Madurai', cursive;
+    color: white;
+}
+
+#button {
+    font-family: 'Arima Madurai', cursive;
+    background-color: transparent;
+    color: white;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 20px aquamarine;
+    border-radius: 5px;
+}
+
+#button:hover {
+    text-shadow: 0px 0px 20px aquamarine;
+    background-color: rgba(109, 182, 241, 0.384);
+    box-shadow: none;
+    color:aquamarine;
+    border-style: hidden;
+    outline: none;
+    transition: all 0.3s ease-out;
+}
+
+#button:active {
+    color:rgb(184, 123, 241);
+    text-shadow: 0px 0px 30px rgb(184, 123, 241);
+    text-decoration:solid;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#facebook:hover {
+    opacity: 0.5;
+    transition: all 0.3s ease-out;
+}
+
+#sound-cloud {
+    position: relative;
+    top: 10px;
+}
+
+#sound-cloud:hover {
+    opacity: 0.5;
+    transition: all 0.3s ease-out;
+}
+
+#insta:hover {
+    opacity: 0.5;
+    transition: all 0.3s ease-out;
+}
+
+/* OTHER HTML ELEMENTS */
+
+a {
+    font-family: 'Arima Madurai', cursive;
+    color: white;
+    text-decoration: none;
+}
+
+body, html {
+    height: 100%;
+}
+
+em {
+    font-size: larger;
+}
+
+#galaxy {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+} 
+
+p {
+    color: black;
+    z-index: 2;
+}
+
+span {
+    font-size: 2em;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    padding-right: 20px;
+    font-family: 'Arima Madurai', cursive;
+    color: white;
+}

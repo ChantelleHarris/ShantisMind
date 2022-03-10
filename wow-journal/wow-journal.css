@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Fleur+De+Leah&family=Fredericka+the+Great&family=Inspiration&family=Noto+Serif+Display:ital,wght@0,100;1,100&display=swap');
+
+#tulips {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.coming-soon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.coming-soon h1 {
+    color: yellow;
+    font-family: 'Noto Serif Display', serif;
+    font-size: 50pt;
+    text-shadow: 0px 0px 20px white;
+}

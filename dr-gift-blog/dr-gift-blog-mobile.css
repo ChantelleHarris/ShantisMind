@@ -1,0 +1,117 @@
+@media(min-width: 300px) and (max-width: 700px) {
+
+    .form-content .post {
+        height: 70%;
+    }
+    
+    .photo-container {
+        float: none;
+        font-size: 10pt;
+    }
+
+    #selfie-container:hover #selfie-hover-container {
+        display: block;
+        right: -115px;
+    }
+
+    #bigger-selfie {
+        width: 350px;
+        height: auto;
+    }
+
+    #soil {
+        width: 250px;
+        height: auto;
+        float: none;
+    }
+
+    .main-content-container {
+        display: grid;
+        gap: 20px;
+        margin: 20px;
+        padding: 40px;
+        height: fit-content;
+        grid-template-rows: repeat(7, 300px);
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "author"
+        "author"
+        "day"
+        "about"
+        "feeling"
+        "blog"
+        "blog";
+        box-shadow: 0px 0px 20px white;
+    }
+
+    #day {
+        position: initial;
+        margin-top: initial;
+    }
+    
+    #galaxy-trees {
+        width: 400px;
+        height: auto;
+        border: none;
+        padding: 10px;
+        box-shadow: 0px 0px 20px white;
+        margin: 20px;
+        position: relative;
+    }
+    
+    #galaxy-post {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.432);
+        text-align: center;
+        border: 1px solid white;
+        width: 250px;
+        color: #f8f2f4;
+        padding: 10px;
+    }
+
+    .content-container-3 {
+        display: grid;
+        height: fit-content;
+        gap: 60px;
+        margin: 20px;
+        padding: 15px 20px;
+        grid-template-rows: repeat(8, 300px);
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "omni"
+        "fall"
+        "int"
+        "bio"
+        "dancer"
+        "transcend" 
+        "om"
+        "perm";
+        box-shadow: 0px 0px 20px white;
+    }
+
+    #omnism {
+        height: 250px;
+    }
+
+    #fall-in-love {
+        text-align: center;
+    }
+
+    #intimacy {
+        justify-content: center;
+    }
+
+    #bio-diverse {
+        justify-content: center;
+    }
+
+    #movement-overlay .share-button-container {
+        display: flex;
+        flex-direction: row;
+        gap: inherit;
+    }
+
+    #gift-blog-bottom-footer {
+        width: 92.95vw;
+    }
+}

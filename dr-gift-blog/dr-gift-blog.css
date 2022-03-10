@@ -1,0 +1,1354 @@
+/* @import url("dr-gift-blog-mobile.css");
+@import url("dr-gift-blog-medium-screens.css"); */
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Fleur+De+Leah&family=Fredericka+the+Great&family=Inspiration&family=Noto+Serif+Display:ital,wght@0,100;1,100&display=swap');
+
+/* ALL OTHER SCREEN SIZES */
+
+#dr-gift-blog {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.page-container {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arima Madurai', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#clouds {
+    left: 0;
+    top: 0;
+    position: fixed;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* HEADER */
+
+#gift-blog-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    align-self: center;
+    height: 100px;
+    width: 100px;
+    padding: 25px;
+    margin-top: 30px;
+    font-family: 'Fredericka the Great', cursive;
+    color: #f8f8f2;
+    background-color: rgba(245, 197, 255, 0.377);
+    border: 8px solid rgba(180, 197, 221, 0.842);
+    border-radius: 50%;
+}
+
+#gift-blog-title {
+    text-align: center;
+}
+
+.header-nav-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    position: absolute;
+    top: 175px;
+}
+
+#navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    gap: 20px;
+    padding: 10px;
+    margin: 5px;
+    font-family: 'Arima Madurai', cursive;
+}
+
+#nav-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+
+#navigation #nav-item a {
+    display: flex;
+    flex-direction: row;
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+    color: #3a3a3a;
+    font-weight: bold;
+    text-decoration: overline;
+}
+
+#navigation #nav-item a:hover {
+    color: #f8f2f4;
+}
+
+#navigation #nav-item a:active {
+    color: rgb(180, 197, 221);
+}
+
+/* SUBMIT A GIFT FORM */
+
+.gift-submit-form-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(92, 149, 175, 0.356);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 3;
+}
+
+.gift-submit-form-content:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.gift-submit-form-content .post {
+    text-align: center;
+    padding: 40px;
+    gap: 25px;
+    border: 1px solid white;
+    box-shadow: 0px 0px 20px white;
+    width: 60%;
+    height: 55%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    overflow: scroll;
+    background: rgba(92, 149, 175, 0.801);
+}
+
+.gift-submit-form-content #gift-form h2 {
+    color: white;
+    font-size: 24pt;
+    letter-spacing: 0.5em;
+    text-decoration: underline;
+    margin: 0;
+}
+
+.gift-submit-form-content #gift-form h5 {
+    margin: 0;
+    text-align: center;
+}
+
+.gift-submit-form-content .post .x {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.gift-submit-form-content .post .x:hover {
+    color: rgb(161, 115, 161);
+    transition: all 0.3s ease-out;
+}
+
+#gift-submit-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Arima Madurai', cursive;
+    font-size: larger;
+    letter-spacing: 1em;
+}
+
+#gift-submit-label input {
+    border-radius: 5px;
+    border: 1px solid white;
+    box-shadow: 0px 0px 20px white;
+    color: white;
+    padding: 5px;
+    width: 200px;
+    background-color: transparent;
+    margin: 10px;
+}
+
+#gift-submit-label input:hover {
+    box-shadow: 0px 0px 40px rgb(245, 197, 255);
+    background-color: rgba(53, 146, 141, 0.301);
+}
+
+#gift-submit-label input:focus {
+    outline:#DF3796;
+    border: 1px solid rgb(245, 197, 255);
+} 
+
+#gift-submit-label textarea {
+    border-radius: 5px;
+    font-family: 'Arima Madurai', cursive;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    box-shadow: 0px 0px 20px white;
+    margin: 10px;
+}
+
+#gift-submit-label textarea:hover {
+    box-shadow: 0px 0px 40px rgb(245, 197, 255);
+    background-color: rgba(53, 146, 141, 0.301);
+}
+
+#gift-submit-label textarea:focus {
+    outline:#DF3796;
+    border: 1px solid rgb(245, 197, 255);
+} 
+
+#gift-button {
+    border: 1px solid white;
+    background-color: transparent;
+    box-shadow: 0px 0px 20px white;
+    font-family: 'Arima Madurai', cursive;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+}
+
+#gift-button:hover {
+    box-shadow: 0px 0px 40px rgb(245, 197, 255);
+    background-color: rgba(53, 146, 141, 0.301);
+    color: rgb(245, 197, 255);
+}
+
+#gift-button:focus {
+    border-color: green;
+}
+
+/* MAIN CONTENT */
+
+.main-content-container {
+    display: grid;
+    gap: 20px;
+    margin: 20px;
+    padding: 40px;
+    height: fit-content;
+    grid-template-rows: repeat(3, 31%);
+    grid-template-columns: repeat(3, 320px);
+    grid-template-areas:
+    "author about feeling"
+    "author blog blog"
+    "day blog blog";
+    box-shadow: 0px 0px 20px white;
+}
+
+/* AUTHOR SECTION */
+
+#author {
+    grid-area: author;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f8f8f2;
+    padding: 20px;
+    background-color: #3a3a3a81;
+}
+
+#author h1 {
+    text-decoration: underline;
+}
+
+#selfie {
+    border-radius: 50%;
+    border: 3px solid rgb(180, 197, 221);
+    box-shadow: 0px 0px 20px white;
+    width: 125px;
+    height: 125px;
+    padding: 20px;
+}
+
+#selfie-container {
+    position: relative;
+}
+
+#selfie-container #selfie-hover-container {
+    display: none;
+    position: absolute;
+    z-index: 4;
+}
+
+#selfie-container:hover #selfie-hover-container {
+    display: inline-block;
+}
+
+#bigger-selfie {
+    width: 550px;
+    height: auto;
+    padding: 20px;
+    border: 3px solid rgb(180, 197, 221);
+    box-shadow: 0px 0px 20px white;
+}
+
+/* ABOUT SECTION */
+
+#about-the-blog {
+    grid-area: about;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(245, 197, 255, 0.377);
+    border: 1px solid #3a3a3a;
+    color: #3a3a3a;
+}
+
+#about-the-blog h1 {
+    text-decoration: underline;
+}
+
+/* FEELING OF THE DAY SECTION */
+
+#feeling {
+    grid-area: feeling;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#feeling h3 {
+    color: #3a3a3a;
+    letter-spacing: 5px;
+    text-decoration: underline;
+}
+
+/* THOUGHT OF THE DAY SECTION */
+
+#day {
+    grid-area: day;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#day h3 {
+    color: #3a3a3a;
+    letter-spacing: 5px;
+    text-decoration: underline;
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #3a3a3a;
+    background-color: rgba(0, 0, 128, 0.397);
+    padding: 20px;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    box-shadow: 0px 0px 20px #3a3a3a;
+    background-color: rgba(180, 197, 221, 0.507);
+}
+
+/* DREAM SECTION */
+
+#blog {
+    grid-area: blog;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #3a3a3a81;
+}
+
+#blog {
+    text-align: justify;
+    font-style: normal;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 0px 20px white;
+    padding: 10px;
+}
+
+.dreamcatcher-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#dreamcatcher {
+    width: auto;
+    height: 450px;
+    padding: 10px;
+    box-shadow: 0px 0px 20px white;
+    position: relative;
+}
+
+.dreamcatcher-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(180, 197, 221, 0.548);
+    opacity: 0;
+    transition: opacity 0.25s;
+    transition: all 0.3s ease-out;
+}
+
+.dreamcatcher-overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.dreamcatcher-overlay:hover {
+    opacity: 1;
+    transition: all 0.3s ease-out;
+}
+
+.dreamcatcher-overlay:hover > * {
+    transform: translateY(0px);
+}
+
+#dreamcatcher-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+#dream-title {
+    position: absolute;
+    width: 50vw;
+    color: #f8f8f2;
+    font-size: 34pt;
+    cursor: pointer;
+    text-decoration: none;
+    text-shadow: 20px 20px 100px black;
+}
+
+#dream-title:hover {
+    text-decoration: overline;
+    color: rgb(245, 197, 255);
+    text-shadow: 20px 20px 100px black;
+    transition: all 0.3s ease-out;
+}
+
+#dream-heading {
+    text-align: center;
+    margin:0;
+}
+
+.post-author {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-author h4 {
+    font-family: 'Noto Serif Display', serif;
+    text-decoration: overline;
+    color: rgb(36, 26, 36);
+    letter-spacing: 8px;
+}
+
+#avatar {
+    width: 100px;
+    height: auto;
+}
+
+.photo-container {
+    float:left;
+    font-size: 10pt;
+}
+
+.dream-post-photo {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+#soil {
+    width: 500px;
+    height: auto;
+    float: left;
+}
+
+.caption {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.caption a {
+    transition: all 0.3s ease-out;
+    color: #3a3a3a;
+    font-weight: bold;
+}
+
+.caption a:hover {
+    color: rgb(236, 144, 255);
+    text-decoration: overline;
+}
+
+.caption a:active {
+    color: rgb(180, 197, 221);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(1, 26, 39, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 3;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay + #dream-blog-top-link:target {
+    transition: opacity;
+    visibility:visible;
+    opacity: 1;
+}
+
+#blog article {
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post {
+    padding: 20px;
+    background: #f8f8f2;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+.post h2 {
+    margin-top: 0;
+    font-family: 'Noto Serif Display', serif;
+    font-weight: bold;
+    font-size: 30pt;
+    color: rgb(44, 44, 44);
+    letter-spacing: 8px;
+}
+
+.post .x {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+}
+
+.post .x:hover {
+    color: rgb(161, 115, 161);
+    transition: all 0.3s ease-out;
+}
+
+.post .content {
+    color: rgb(44, 44, 44);
+    margin: 10px;
+    padding: 20px;
+    font-family: 'Noto Serif Display', serif;
+    font-size: 20pt;
+    border: 2px solid rgb(44, 44, 44);
+}
+
+/* SHARE BUTTONS */
+
+.share-button-container {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instagram {
+    min-width: 110px;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: #C71E7E;
+    display: flex;
+    transition: all .2s ease-in-out;
+    margin-right: 10px;
+}
+
+.instagram i {
+    color: #DF3796;
+    font-size: 20px;
+    padding-right: 10px;
+    transition: all .3s ease-in-out;
+};
+
+.instagram span {
+    font-family: "Roboto", sans-serif;
+    align-self: center;
+    transform: translateX(0px);
+    transition: all .1s ease-in-out;
+    opacity: 1;
+}
+
+.instagram:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #ff3019 0%,#c90477 100%);
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.10);
+}
+
+.instagram i:hover {
+    transform: translateX(45px);
+    padding-right: 0;
+    color: #FFF;
+}
+
+.instagram span:hover {
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.instagram:active {
+    transform: scale(1);
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.10);
+}
+
+.face-b {
+    min-width: 110px;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: #286ED6;
+    display: flex;
+    transition: all .2s ease-in-out;
+}
+
+.face-b i {
+    color: #286ED6;
+    font-size: 20px;
+    padding-right: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.face-b span {
+    font-family: "Roboto", sans-serif;
+    align-self: center;
+    transform: translateX(0px);
+    transition: all .1s ease-in-out;
+    opacity: 1;
+}
+
+.face-b:hover {
+    transform: scale(1.1);
+    background-color: #286ED6;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.10);
+}
+
+.face-b i:hover {
+    transform: translateX(45px);
+    padding-right: 0;
+    color: #FFF;
+}
+
+.face-b span:hover {
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.face-b:active {
+    transform: scale(1);
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.10);
+}
+
+#dream-blog-top-link {
+    text-decoration: none;
+    color: #3a3a3a;
+    font-weight: bold;
+    text-decoration: overline;
+    margin: 20px;
+}
+
+#dream-blog-top-link:hover {
+    color: rgb(14, 173, 14);
+}
+
+#dream-blog-top-link:active {
+    color: rgb(180, 197, 221);
+}
+    
+@media screen and (max-width: 700px){
+    .post{
+        width: 70%;
+    }
+}
+
+/* KNIGHT IN SHINING ARMOR SECTION */
+
+.content-container-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#galaxy-photo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+    margin: 20px;
+}
+
+#galaxy-trees {
+    width: 450px;
+    height: auto;
+    border: none;
+    padding: 10px;
+    box-shadow: 0px 0px 20px white;
+    margin: 20px;
+    position: relative;
+}
+
+#galaxy-post {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.432);
+    text-align: center;
+    border: 1px solid white;
+    width: 300px;
+    color: #f8f2f4;
+    padding: 10px;
+}
+
+#knight {
+    color: #f8f2f4;
+    font-family: 'Cherish', cursive;
+    text-shadow: 0px 0px 10px #f8f2f4;
+    font-size: 45pt;
+    font-weight: bold;
+    border: none;
+    padding: none;
+    border-radius: none;
+}
+
+#knight-overlay {
+    background: rgba(118, 126, 3, 0.253);
+}
+
+.social-media-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(102, 1, 1, 0.253);
+    opacity: 0;
+    transition: opacity 0.25s;
+    transition: all 0.3s ease-out;
+    z-index: 1;
+}
+
+.social-media-overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.social-media-overlay:hover {
+    opacity: 1;
+    transition: all 0.3s ease-out;
+}
+
+.social-media-overlay:hover > * {
+    transform: translateY(0px);
+}
+
+.content-container-3 {
+    display: grid;
+    gap: 60px;
+    margin: 20px;
+    padding: 20px 80px;
+    grid-template-rows: repeat(2, 150px) repeat(3, 300px);
+    grid-template-columns:  200px repeat(2, 150px) 200px;
+    grid-template-areas:
+    " . omni omni . "
+    "fall fall fall fall "
+    "int int bio bio"
+    "dancer transcend transcend om"
+    "perm perm perm perm";
+    box-shadow: 0px 0px 20px white;
+}
+
+/* OMNISM SECTION */
+
+#omnism {
+    grid-area: omni;
+    box-shadow: 0px 0px 20px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40pt;
+    font-weight: bold;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.712);
+    color:#f8f2f4;
+    background-color: rgba(180, 197, 221, 0.185);
+    border: 1px solid rgb(180, 197, 221);
+    margin-top: 20px;
+    position: relative;
+}
+
+#omnism-overlay {
+    background: rgba(79, 172, 235, 0.253);
+}
+
+#omnism-overlay .share-button-container a {
+    text-shadow: none;
+}
+
+/* FALL IN LOVE SECTION */
+
+#fall-in-love {
+    grid-area: fall;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 24pt;
+    color: white;
+}
+
+#fall-in-love-overlay {
+    background: rgba(230, 159, 7, 0.253);
+}
+
+#blush-sky {
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    padding: 10px;
+    border: 2px solid pink;
+    box-shadow: 0px 0px 20px pink;
+}
+
+/* INTIMACY SECTION */
+
+#intimacy {
+    grid-area: int;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#second-circle {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    background-color: transparent;
+    box-shadow: none;
+    color: whitesmoke;
+    text-shadow: 0px 0px 20px black;
+    font-weight: bold;
+    font-size: 30pt;
+    letter-spacing: 3px;
+}
+
+#second-circle #circle-overlay {
+    background: rgba(236, 233, 13, 0.459);
+    border-radius: 50%;
+}
+
+#second-circle #circle-overlay .share-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-shadow: none;
+}
+
+#flowers {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    padding: 20px;
+    border: 2px solid green;
+    box-shadow: 0px 0px 20px yellowgreen;
+}
+
+/* BIO-DIVERSE LAWNS SECTION */
+
+#bio-diverse {
+    grid-area: bio;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#second-circle-2 {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    background-color: transparent;
+    box-shadow: none;
+    color: white;
+    font-weight: bold;
+    font-size: 30pt;
+}
+
+#second-circle-2 #circle-overlay {
+    background: rgba(9, 102, 1, 0.479);
+    border-radius: 50%;
+}
+
+#second-circle-2 #circle-overlay .share-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-shadow: none;
+}
+
+#lawn {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    padding: 20px;
+    border: 2px solid green;
+    box-shadow: 0px 0px 20px green;
+}
+
+/* DANCER SECTION */
+
+#dancer {
+    grid-area: dancer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 12pt;
+    text-align: center;
+    color: white;
+}
+
+#dancer-post {
+    text-shadow: 0px 0px 20px rgb(0, 0, 0);
+    padding: 10px;
+}
+
+#movement-overlay {
+    background: rgba(31, 29, 29, 0.253);
+}
+
+#movement-overlay .share-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#movement {
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    padding: 10px;
+    border: 2px solid rgb(80, 79, 79);
+    box-shadow: 0px 0px 20px rgb(80, 79, 79);
+}
+
+/* TRANSCENDANT LOVE SECTION */
+
+#transcendant-love {
+    grid-area: transcend;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 24pt;
+    text-align: center;
+    color: white;
+}
+
+#transcendant-overlay {
+    background: rgba(7, 230, 219, 0.253);
+}
+
+#rainbow-mountain {
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    padding: 10px;
+    border: 2px solid rgba(255, 0, 0, 0.541);
+    box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.541);
+}
+
+/* OM SECTION */
+
+#om {
+    grid-area: om;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 24pt;
+    text-align: center;
+    color: #f8f2f4;
+}
+
+#art {
+    width: 100%;
+    height: 100%; 
+    position: relative;
+    object-fit: cover;
+    z-index: -1;
+    padding: 10px;
+    border: 2px solid rgb(102, 1, 1);
+    box-shadow: 0px 0px 20px rgb(102, 1, 1);
+}
+
+.art-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(102, 1, 1, 0.253);
+    opacity: 0;
+    transition: opacity 0.25s;
+    transition: all 0.3s ease-out;
+}
+
+.art-overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.art-overlay:hover {
+    opacity: 1;
+    transition: all 0.3s ease-out;
+}
+
+.art-overlay:hover > * {
+    transform: translateY(0px);
+}
+
+#art-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+#om-post {
+    height: inherit;
+    width: 80%;
+    height: 80%;
+    overflow: scroll;
+}
+
+#om-post h2 {
+    margin: 0;
+}
+
+#om-post .post .content {
+    color: rgb(44, 44, 44);
+    margin: 10px;
+    padding: 20px;
+    font-family: 'Noto Serif Display', serif;
+    font-size: 20pt;
+    border: 2px solid rgb(44, 44, 44);
+}
+
+.post-author {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-author h4 {
+    font-family: 'Noto Serif Display', serif;
+    text-decoration: overline;
+    text-align: left;
+    color: rgb(36, 26, 36);
+    letter-spacing: 8px;
+    font-size: 10pt;
+}
+
+#art-title {
+    position: absolute;
+    color: #f8f8f2;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#art-title:hover {
+    text-decoration: overline;
+    color: rgb(164, 243, 194);
+    transition: all 0.3s ease-out;
+}
+
+#chant {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30pt;
+}
+
+/* PERMACULTURE SECTION */
+
+#permaculture {
+    grid-area: perm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 24pt;
+    text-shadow: 0px 0px 20px black;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#permaculture-overlay {
+    background: rgba(124, 189, 5, 0.253);
+}
+
+#permaculture-overlay .share-button-container a {
+    text-shadow: none;
+}
+
+#veggies {
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    padding: 10px;
+    border: 2px solid green;
+    box-shadow: 0px 0px 20px green;
+}
+
+/* FOOTER */
+
+#gift-blog-footer {
+    grid-area: ft;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    margin-top: 10px;
+    background-color: rgba(245, 197, 255, 0.377);
+}
+
+.gift-blog-footer-container {
+    grid-area: ft;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 40px;
+}
+
+#gift-blog-subscribe-form {
+    grid-area: ft;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+#gift-blog-subscribe-form-title {
+    font-family: 'Arima Madurai', cursive;
+    text-decoration: overline;
+    font-size: initial;
+    letter-spacing: 1em;
+    font-size: larger;
+    text-shadow: 0px 0px 20px #3a3a3a;
+    color: #3a3a3a;
+}
+
+.gift-blog-footer-container label {
+    text-shadow: 0px 0px 20px #3a3a3a;
+    color: #3a3a3a;
+    text-decoration: overline;
+}
+
+#gift-blog-name-box {
+    background-color: transparent;
+    font-family: 'Arima Madurai', cursive;
+    color: #3a3a3a;
+    border-style: hidden;
+    box-shadow: 0px 0px 20px #3a3a3a;
+    border-radius: 5px;
+    padding-left: 5px;
+    outline: none;
+    width: 200px;
+    height: 25px;
+}
+
+#gift-blog-name-box:hover {
+    box-shadow: 0px 0px 15px #f8f2f4;
+    transition: all 0.3s ease-out;
+    background-color: rgba(180, 197, 221, 0.842);
+}
+
+#gift-blog-name-box:focus {
+    border: 1px solid white;
+}
+
+#gift-blog-email-box {
+    background-color: transparent;
+    font-family: 'Arima Madurai', cursive;
+    color: #3a3a3a;
+    border-style: hidden;
+    box-shadow: 0px 0px 20px #3a3a3a;
+    border-radius: 5px;
+    padding-left: 5px;
+    outline: none;
+    width: 200px;
+    height: 25px;
+}
+
+#gift-blog-email-box:hover {
+    box-shadow: 0px 0px 15px #f8f2f4;
+    transition: all 0.3s ease-out;
+    background-color: rgba(180, 197, 221, 0.842);
+}
+
+#gift-blog-email-box:focus {
+    border: 1px solid white;
+}
+
+#subscribe-form-button {
+    font-family: 'Arima Madurai', cursive;
+    background-color: transparent;
+    color: #3a3a3a;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 20px #3a3a3a;
+    border-radius: 5px;
+}
+
+#subscribe-form-button:hover {
+    text-shadow: 0px 0px 20px #f8f2f4;
+    box-shadow: none;
+    color: #f8f2f4;
+    border-style: hidden;
+    outline: none;
+    transition: all 0.3s ease-out;
+    background-color: rgba(180, 197, 221, 0.842);
+}
+
+#subscribe-form-button:active {
+    color: rgb(245, 197, 255);
+    text-shadow: 0px 0px 30px rgb(180, 197, 221);
+    text-decoration: solid;
+}
+
+#gift-blog-top-link {
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+    color: #3a3a3a;
+    font-weight: bold;
+    text-decoration: overline;
+    margin: 20px;
+}
+
+#gift-blog-top-link:hover {
+    color: #f8f2f4;
+}
+
+#gift-blog-top-link:active {
+    color: rgb(180, 197, 221);
+}
+
+#gift-blog-bottom-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96.99vw;
+    font-family: 'Arima Madurai', cursive;
+    letter-spacing: 5px;
+    padding: 20px;
+    color: #f8f2f4;
+    background-color: rgba(180, 197, 221, 0.842);
+}
+
+/* @import url("dr-gift-blog-mobile.css");
+@import url("dr-gift-blog-medium-screens.css"); */

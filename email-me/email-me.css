@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+
+#email-me {
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    background: rgba(70, 180, 70, 0.733);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.get-in-touch-container {
+    background: linear-gradient(to left, #c5ce74, #99c4f5);
+    position: relative;
+    border: 10px solid rgb(241, 173, 149);
+    border-right: none;
+    border-left: none;
+    box-shadow: 0px 0px 16px rgb(241, 173, 149);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+}
+
+#contact-form h1 {
+    font-size: 50px;
+    padding-left: 50px;
+    letter-spacing: 60px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+#get-in-touch-title {
+    text-shadow: 0px 0px 16px white;
+    letter-spacing: 5px;
+    color: black;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: 0px 0px 16px white;
+    margin-top: -100px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+#name-label {
+    position:relative;
+    font-size: 30px;
+    text-shadow: 0px 0px 16px white;
+    letter-spacing: 20px;
+    z-index: 1;
+}
+
+#name-box {
+    position: relative;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 5px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: 0px 0px 16px white;
+    z-index: 1;
+}
+
+#name-box:focus {
+    color: white;
+    outline-color: goldenrod;
+}
+
+#name-box:hover {
+    background-color:rgba(241, 173, 149, 0.555);
+}
+
+#email-label {
+    font-size: 30px; 
+    text-shadow: 0px 0px 16px white;
+    position: relative;
+    letter-spacing: 20px;
+    z-index: 1;
+}
+
+#email-box {
+    font-size: 30px;
+    background-color: transparent;
+    border-radius: 5px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: 0px 0px 16px white;
+    position: relative;
+    z-index: 1;
+}
+
+#email-box:focus {
+    color: white;
+    outline-color: goldenrod;
+}
+
+#email-box:hover {
+    background-color: rgba(241, 173, 149, 0.555)
+}
+
+#message-label {
+    font-size: 30px; 
+    text-shadow: 0px 0px 16px white;
+    position: relative;
+    letter-spacing: 20px;
+    z-index: 1;
+}
+
+#message-box {
+    position:relative;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    background-color: transparent;
+    border-radius: 5px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: 0px 0px 16px white;
+    z-index: 1;
+}
+
+#message-box:focus {
+    color: white;
+    outline-color: goldenrod;
+}
+
+#message-box:hover {
+    background-color: rgba(241, 173, 149, 0.555);
+}
+
+#contact-form-button {
+    font-size: 30px;
+    font-family: 'Rajdhani', sans-serif;
+    border-radius: 5px;
+    background-color: rgba(157, 60, 206, 0.397);
+    border: 1px solid white;
+    box-shadow: 0px 0px 16px teal;
+    position: relative;
+    z-index: 1;
+}
+
+#contact-form-button:hover {
+    color: white;
+    border-color: goldenrod;
+    background-color: transparent;
+}
+
+#contact-form-button:active {
+    background-color: rgba(241, 173, 149, 0.397);
+}
+
+.flower-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.flower-area li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+}
+
+.flower-area li:nth-child(1) {
+    left: 86%;
+    width: 85px;
+    height: 85px;
+    animation-delay: 0s;
+}
+
+.flower-area li:nth-child(2) {
+    left: 12%;
+    width: 35px;
+    height: 35px;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+}
+
+.flower-area li:nth-child(3) {
+    left: 70%;
+    width: 105px;
+    height: 105px;
+    animation-delay: 5.5s;
+}
+
+.flower-area li:nth-child(4) {
+    left: 42%;
+    width: 155px;
+    height: 155px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.flower-area li:nth-child(5) {
+    left: 65%;
+    width: 45px;
+    height: 45px;
+    animation-delay: 0s;
+}
+
+.flower-area li:nth-child(6) {
+    left: 15%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 3.5s;
+}
+
+.flower-area li:nth-child(7) {
+    left: 86%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 3s;
+}
+
+.flower-area li:nth-child(8) {
+    left: 84%;
+    top: 99%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 3s;
+}
+
+.flower-area li:nth-child(9) {
+    left: 88%;
+    top: 100%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 3s;
+}
+
+.flower-area li:nth-child(10) {
+    left: 12%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 4.5s;
+    animation-duration: 10s;
+}
+
+.flower-area li:nth-child(11) {
+    left: 10%;
+    top: 99%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 4.5s;
+    animation-duration: 10s;
+}
+
+.flower-area li:nth-child(12) {
+    left: 14%;
+    top: 100%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 4.5s;
+    animation-duration: 10s;
+}
+
+.flower-area li:nth-child(13) {
+    left: 70%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 8.5s;
+}
+
+.flower-area li:nth-child(14) {
+    left: 70%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 8.5s;
+}
+
+.flower-area li:nth-child(15) {
+    left: 70%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 8.5s;
+}
+
+.flower-area li:nth-child(16) {
+    left: 42%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 3s;
+    animation-duration: 15s;
+}
+
+.flower-area li:nth-child(17) {
+    left: 38%;
+    top: 99%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 3s;
+    animation-duration: 15s;
+}
+
+.flower-area li:nth-child(18) {
+    left: 46%;
+    top: 100%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 3s;
+    animation-duration: 15s;
+}
+
+.flower-area li:nth-child(19) {
+    left: 65%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 3s;
+}
+
+.flower-area li:nth-child(20) {
+    left: 65%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 3s;
+}
+
+.flower-area li:nth-child(21) {
+    left: 65%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 3s;
+}
+
+.flower-area li:nth-child(22) {
+    left: 15%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 6.5s;
+}
+
+.flower-area li:nth-child(23) {
+    left: 15%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 6.5s;
+}
+
+.flower-area li:nth-child(24) { 
+    left: 15%;
+    width: 115px;
+    height: 115px;
+    animation-delay: 6.5s;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@-o-keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+#home-link-shanti {
+    position: relative;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 0.5em;
+    text-decoration: none;
+    color: white;
+    font-size: 20pt;
+    top: 20px;
+}
+
+#home-link-shanti:hover {
+    padding: 10px;
+    border-radius: 25px;
+    text-decoration: overline;
+    color: blue;
+    transition: all 0.3s ease-out;
+}
