@@ -1,9 +1,17 @@
 @media(min-width: 300px) and (max-width: 700px) {
 
-    .form-content .post {
+    .gift-submi-form-content .post {
         height: 70%;
     }
     
+    .dream-post-photo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+
     .photo-container {
         float: none;
         font-size: 10pt;
@@ -114,6 +122,7 @@
     #gift-blog-bottom-footer {
         width: 92.95vw;
     }
+
     @media screen and (max-width: 700px){
         #dreamcatcher-post .post{
             width: 85%;
