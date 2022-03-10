@@ -114,4 +114,9 @@
     #gift-blog-bottom-footer {
         width: 92.95vw;
     }
+    @media screen and (max-width: 700px){
+        #dreamcatcher-post .post{
+            width: 85%;
+        }
+    }
 }
